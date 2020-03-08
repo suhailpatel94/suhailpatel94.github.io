@@ -1,0 +1,87 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.project-bg{
+  background-color: rgba(196,196,196,0.25);
+}
+
+.page_title{
+   font-size: 42px;
+   font-weight: 700;
+}
+
+.semi_bold{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.regular{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.page_content{
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.87;
+  color: #000;
+}
+ul{
+  list-style: none;
+}
+ul>li{
+  display: flex;
+}
+ul.content_list >li::before{    
+  margin-right: 8px;
+  font-family: 'Material Icons';
+  content: 'check';
+  display:inline-block;
+}
+.content{
+  margin-top: 24px;
+}
+.title_underline{
+  background-color: #2979ff;
+  height: 6px;
+  width: 52px;
+  
+}
+
+.chip_rect{
+  background-color: #2979ff33;
+  color: #2979ff;
+  border-radius: 2px;
+}
+
+.project_container{
+  margin-top: 24px;
+}
+
+.pt-0{
+  padding-top: 0px !important;
+}
+
+.ml-32{
+  margin-left: 32px;
+}
+
+.m4-32{
+  margin-right: 32px;
+}

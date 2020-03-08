@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <link rel="stylesheet" href="dist/devices.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+
+
+  <div class="container center">
+  <div class="project-bg center">
+    <div class="device device-galaxy-s8 device-black-dark device_section">
+      <div class="device-frame">
+        <img class="device-content" src="images/img.png">
+      </div>
+      <div class="device-stripe"></div>
+      <div class="device-header"></div>
+      <div class="device-sensors"></div>
+      <div class="device-btns"></div>
+      <div class="device-power"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container center ">
+ <img class="img_container" />
+</div>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script>
+    
+  
+    $( document ).ready(function() {
+      var div = document.getElementsByClassName("device_section");
+  
+      function PrintDiv(div)
+{
+  html2canvas(div).then(function(canvas) {
+    document.body.appendChild(canvas);
+});
+//   html2canvas(div).then(function(canvas) {
+//     //document.body.appendChild(canvas);
+//     var myImage = canvas.toDataURL();
+//             console.log("called");
+//             console.log(myImage);
+//             downloadURI(myImage, "MaSimulation.png");
+// });
+
+ 
+    
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();   
+    //after creating link you should delete dynamic link
+    //clearDynamicLink(link); 
+}
+
+PrintDiv(div[0])
+
+    });
+
+    </script>
+  </body>
+</html>
